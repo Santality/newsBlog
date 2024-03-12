@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
+            $table->string('photo');
             $table->foreignId('category_id')->references('id')->on('categories');
-            $table->dateTime('publish_date');
             $table->boolean('is_blocked')->default(false);
             $table->timestamps();
         });
